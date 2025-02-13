@@ -31,11 +31,20 @@
       </div>
     </div>
     <div class="reset">
-      <button id="open">Open</button>
+      <button id="open" onClick="play();">Open</button>
       <button id="reset">Close</button>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="love letter 2.js"></script>
+    <script>
+      function play(){
+        var audio = new Audio('song.mp3'); // Replace with your audio file path
+        
+        audio.play().catch(function(error) {
+            console.log("Playback failed: ", error);
+        });
+      }
+    </script>
   </body>
 </html>
